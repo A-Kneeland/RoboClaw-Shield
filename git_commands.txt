@@ -1,0 +1,24 @@
+>>git status
+	tells you which files are changed
+	tells you what branch you're on
+>>git checkout <branch name>
+	switches branches to the branch you specify. 
+>>git add <filename>
+	adds a file to the staging area for commits.
+>>git commit -m "Message"
+	commits to your local repo.
+>>git push origin <branch> 
+	pushes your changes to the remote branch.
+
+
+In a normal session, you'll probably do the following:
+>>git status
+then 
+>>git checkout Amelio_Shield
+	(but only if you need to switch branches!)
+>>git add *.sch *.brd
+>>git commit -m "my message!"
+then you can keep developing or push immediately.
+>>git push origin Amelio_Shield
+
+
