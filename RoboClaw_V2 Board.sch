@@ -3,7 +3,7 @@
 <eagle version="8.6.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -259,16 +259,6 @@
 <wire x1="1.27" y1="-0.635" x2="1.905" y2="-1.27" width="0.3048" layer="21"/>
 <wire x1="1.905" y1="-1.27" x2="3.175" y2="-1.27" width="0.3048" layer="21"/>
 </package>
-<package name="3_PIN">
-<wire x1="4.572" y1="4.826" x2="-1.524" y2="4.826" width="0.127" layer="21"/>
-<wire x1="4.572" y1="4.826" x2="4.572" y2="12.954" width="0.127" layer="21"/>
-<wire x1="4.572" y1="12.954" x2="-1.524" y2="12.954" width="0.127" layer="21"/>
-<wire x1="-1.524" y1="12.954" x2="-1.524" y2="4.826" width="0.127" layer="21"/>
-<text x="3.556" y="12.446" size="0.254" layer="21">Front</text>
-<pad name="P$1" x="1.27" y="11.43" drill="1.2" diameter="1.778" shape="octagon"/>
-<pad name="P$2" x="1.27" y="8.89" drill="1.2" diameter="1.778" shape="octagon"/>
-<pad name="P$3" x="1.27" y="6.35" drill="1.2" diameter="1.778" shape="octagon"/>
-</package>
 </packages>
 <symbols>
 <symbol name="ROBOCLAW_PINS">
@@ -333,17 +323,6 @@
 <pin name="PIN_4" x="10.16" y="-30.48" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R90"/>
 <pin name="PIN_1" x="12.7" y="-30.48" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
-<symbol name="3_PIN">
-<pin name="PIN_1" x="5.08" y="0" length="middle" rot="R180"/>
-<pin name="PIN_2" x="5.08" y="-2.54" length="middle" rot="R180"/>
-<pin name="PIN_3" x="5.08" y="-5.08" length="middle" rot="R180"/>
-<wire x1="2.54" y1="-7.62" x2="2.54" y2="2.54" width="0.3048" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="-10.16" y2="2.54" width="0.3048" layer="94"/>
-<wire x1="-10.16" y1="2.54" x2="-10.16" y2="-7.62" width="0.3048" layer="94"/>
-<wire x1="-10.16" y1="-7.62" x2="2.54" y2="-7.62" width="0.3048" layer="94"/>
-<text x="-7.62" y="2.54" size="1.778" layer="95">&gt;Name</text>
-<text x="-7.62" y="-10.16" size="1.778" layer="96">&gt;Value</text>
-</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ROBOCLAW_PINS">
@@ -378,23 +357,6 @@
 <connect gate="G$1" pin="PIN_7" pad="P$7"/>
 <connect gate="G$1" pin="PIN_8" pad="P$8"/>
 <connect gate="G$1" pin="PIN_9" pad="P$9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="3_PIN" uservalue="yes">
-<gates>
-<gate name="G$1" symbol="3_PIN" x="5.08" y="2.54"/>
-</gates>
-<devices>
-<device name="" package="3_PIN">
-<connects>
-<connect gate="G$1" pin="PIN_1" pad="P$1"/>
-<connect gate="G$1" pin="PIN_2" pad="P$2"/>
-<connect gate="G$1" pin="PIN_3" pad="P$3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2000,9 +1962,9 @@
 <wire x1="0" y1="2.54" x2="1.27" y2="2.54" width="0.6096" layer="94"/>
 <text x="-1.27" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
 <text x="-1.27" y="5.842" size="1.778" layer="95">&gt;NAME</text>
-<pin name="1" x="-5.08" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="2" x="-5.08" y="0" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="3" x="-5.08" y="-2.54" visible="pad" length="middle" direction="pas" swaplevel="1"/>
+<pin name="1" x="-5.08" y="2.54" visible="off" length="middle" direction="pas" swaplevel="1"/>
+<pin name="2" x="-5.08" y="0" visible="off" length="middle" direction="pas" swaplevel="1"/>
+<pin name="3" x="-5.08" y="-2.54" visible="off" length="middle" direction="pas" swaplevel="1"/>
 </symbol>
 <symbol name="HEADER_POS4">
 <wire x1="3.81" y1="-5.08" x2="-1.27" y2="-5.08" width="0.4064" layer="94"/>
@@ -2015,10 +1977,10 @@
 <wire x1="0" y1="5.08" x2="1.27" y2="5.08" width="0.6096" layer="94"/>
 <text x="-1.27" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
 <text x="-1.27" y="8.382" size="1.778" layer="95">&gt;NAME</text>
-<pin name="1" x="-5.08" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="2" x="-5.08" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="3" x="-5.08" y="0" visible="pad" length="middle" direction="pas" swaplevel="1"/>
-<pin name="4" x="-5.08" y="-2.54" visible="pad" length="middle" direction="pas" swaplevel="1"/>
+<pin name="1" x="-5.08" y="5.08" visible="off" length="middle" direction="pas" swaplevel="1"/>
+<pin name="2" x="-5.08" y="2.54" visible="off" length="middle" direction="pas" swaplevel="1"/>
+<pin name="3" x="-5.08" y="0" visible="off" length="middle" direction="pas" swaplevel="1"/>
+<pin name="4" x="-5.08" y="-2.54" visible="off" length="middle" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2300,155 +2262,249 @@
 </classes>
 <parts>
 <part name="U$1" library="Screw Blocks" deviceset="ROBOCLAW_PINS" device=""/>
-<part name="U$3" library="Screw Blocks" deviceset="3_PIN" device=""/>
-<part name="U$4" library="Screw Blocks" deviceset="3_PIN" device=""/>
-<part name="U$5" library="Screw Blocks" deviceset="3_PIN" device=""/>
-<part name="U$6" library="Screw Blocks" deviceset="3_PIN" device=""/>
-<part name="U$7" library="Screw Blocks" deviceset="3_PIN" device=""/>
 <part name="U$8" library="000_CustomPartsMaster" deviceset="2PIN-HEADER" device="ANDERSON_RIGHTANGLE"/>
-<part name="X1" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS3_?" device="43650-0300"/>
-<part name="X2" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS3_?" device="43650-0300"/>
-<part name="X3" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS4_?" device="43045-0401"/>
-<part name="X4" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS4_?" device="43045-0401"/>
+<part name="SERIAL_IN" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS3_?" device="43650-0300"/>
+<part name="SERIAL_OUT" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS3_?" device="43650-0300"/>
+<part name="ENC2" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS4_?" device="43045-0401"/>
+<part name="ENC1" library="con-molex-micro-fit-3_0" deviceset="HEADER_POS4_?" device="43045-0401"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="76.2" y="5.08" size="1.778" layer="97">This encoder pinout is exclusively for drive boards. </text>
+<text x="81.28" y="86.36" size="1.778" layer="97">Alex make this symbol neater plz</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="81.28" y="66.04"/>
-<instance part="U$3" gate="G$1" x="134.62" y="-25.4" rot="R90"/>
-<instance part="U$4" gate="G$1" x="119.38" y="-25.4" rot="R90"/>
-<instance part="U$5" gate="G$1" x="104.14" y="-25.4" rot="R90"/>
-<instance part="U$6" gate="G$1" x="88.9" y="-25.4" rot="R90"/>
-<instance part="U$7" gate="G$1" x="71.12" y="-25.4" rot="R90"/>
-<instance part="U$8" gate="G$1" x="58.42" y="-25.4" rot="R270"/>
-<instance part="X1" gate="G$1" x="167.64" y="60.96"/>
-<instance part="X2" gate="G$1" x="7.62" y="63.5" rot="R180"/>
-<instance part="X3" gate="G$1" x="127" y="-55.88" rot="R270"/>
-<instance part="X4" gate="G$1" x="96.52" y="-55.88" rot="R270"/>
+<instance part="U$1" gate="G$1" x="88.9" y="63.5" smashed="yes" rot="R90">
+<attribute name="VALUE" x="92.71" y="81.026" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="92.71" y="50.292" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="U$8" gate="G$1" x="38.1" y="27.94" rot="R270"/>
+<instance part="SERIAL_IN" gate="G$1" x="167.64" y="60.96"/>
+<instance part="SERIAL_OUT" gate="G$1" x="7.62" y="63.5" rot="R180"/>
+<instance part="ENC2" gate="G$1" x="129.54" y="15.24"/>
+<instance part="ENC1" gate="G$1" x="96.52" y="15.24"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$6" class="0">
-<segment>
-<wire x1="132.08" y1="-17.78" x2="124.46" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="PIN_3"/>
-<wire x1="124.46" y1="-17.78" x2="124.46" y2="-20.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PIN_9"/>
-<wire x1="88.9" y1="73.66" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PIN_8"/>
-<wire x1="88.9" y1="58.42" x2="88.9" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_7"/>
-<wire x1="88.9" y1="35.56" x2="88.9" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="71.12" x2="124.46" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EN2_A" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_16"/>
-<wire x1="81.28" y1="58.42" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
-<label x="81.28" y="50.8" size="1.778" layer="95" rot="R270"/>
+<wire x1="96.52" y1="63.5" x2="101.6" y2="63.5" width="0.1524" layer="91"/>
+<label x="102.616" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EN1_A" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_18"/>
-<wire x1="78.74" y1="58.42" x2="78.74" y2="50.8" width="0.1524" layer="91"/>
-<label x="78.74" y="50.8" size="1.778" layer="95" rot="R270"/>
+<wire x1="96.52" y1="60.96" x2="101.6" y2="60.96" width="0.1524" layer="91"/>
+<label x="102.362" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EN1_+" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_20"/>
-<wire x1="76.2" y1="58.42" x2="76.2" y2="50.8" width="0.1524" layer="91"/>
-<label x="76.2" y="50.8" size="1.778" layer="95" rot="R270"/>
+<wire x1="96.52" y1="58.42" x2="101.6" y2="58.42" width="0.1524" layer="91"/>
+<label x="102.362" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="EN2_+" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_22"/>
-<wire x1="73.66" y1="58.42" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
-<label x="73.66" y="50.8" size="1.778" layer="95" rot="R270"/>
+<wire x1="96.52" y1="55.88" x2="101.6" y2="55.88" width="0.1524" layer="91"/>
+<label x="102.362" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LB_+" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_24"/>
-<wire x1="71.12" y1="58.42" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
-<label x="71.12" y="50.8" size="1.778" layer="95" rot="R270"/>
+<wire x1="96.52" y1="53.34" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
+<label x="102.362" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$29" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PIN_12"/>
-<wire x1="86.36" y1="73.66" x2="86.36" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$30" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PIN_11"/>
-<wire x1="86.36" y1="58.42" x2="86.36" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$31" class="0">
+<net name="S2/RX" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_10"/>
-<wire x1="86.36" y1="35.56" x2="86.36" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="68.58" x2="127" y2="68.58" width="0.1524" layer="91"/>
+<label x="124.46" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERIAL_IN" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="60.96" x2="162.56" y2="60.96" width="0.1524" layer="91"/>
+<label x="149.86" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$32" class="0">
+<net name="ENC1_B" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_15"/>
-<wire x1="83.82" y1="73.66" x2="83.82" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="PIN_17"/>
+<wire x1="81.28" y1="63.5" x2="75.184" y2="63.5" width="0.1524" layer="91"/>
+<label x="74.676" y="64.262" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="ENC1" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="20.32" x2="88.9" y2="20.32" width="0.1524" layer="91"/>
+<label x="78.74" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_14"/>
-<wire x1="83.82" y1="58.42" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="66.04" x2="101.6" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PIN_5"/>
-<wire x1="91.44" y1="58.42" x2="91.44" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PIN_4"/>
-<wire x1="91.44" y1="35.56" x2="91.44" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="PIN_17"/>
-<wire x1="81.28" y1="73.66" x2="81.28" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
+<net name="ENC2_B" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_19"/>
-<wire x1="78.74" y1="73.66" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="60.96" x2="75.438" y2="60.96" width="0.1524" layer="91"/>
+<label x="75.184" y="61.722" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="ENC2" gate="G$1" pin="1"/>
+<wire x1="116.84" y1="20.32" x2="124.46" y2="20.32" width="0.1524" layer="91"/>
+<label x="109.22" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="ENC1_-" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PIN_21"/>
-<wire x1="76.2" y1="73.66" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="58.42" x2="76.2" y2="58.42" width="0.1524" layer="91"/>
+<label x="75.692" y="59.436" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="ENC1" gate="G$1" pin="3"/>
+<wire x1="91.44" y1="15.24" x2="88.9" y2="15.24" width="0.1524" layer="91"/>
+<label x="78.74" y="15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LB-" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_25"/>
+<wire x1="81.28" y1="53.34" x2="76.2" y2="53.34" width="0.1524" layer="91"/>
+<label x="71.12" y="53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="P$2"/>
+<wire x1="35.56" y1="33.02" x2="35.56" y2="38.1" width="0.1524" layer="91"/>
+<label x="30.48" y="38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC2_-" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_23"/>
+<wire x1="81.28" y1="55.88" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
+<label x="75.692" y="57.15" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<wire x1="121.92" y1="15.24" x2="124.46" y2="15.24" width="0.1524" layer="91"/>
+<label x="109.22" y="15.24" size="1.778" layer="95"/>
+<pinref part="ENC2" gate="G$1" pin="3"/>
+<wire x1="124.46" y1="15.24" x2="116.84" y2="15.24" width="0.1524" layer="91"/>
+<junction x="124.46" y="15.24"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_3"/>
+<wire x1="81.28" y1="76.2" x2="76.2" y2="76.2" width="0.1524" layer="91"/>
+<junction x="81.28" y="76.2"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_6"/>
+<wire x1="81.28" y1="73.66" x2="76.2" y2="73.66" width="0.1524" layer="91"/>
+<label x="71.12" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_9"/>
+<wire x1="81.28" y1="71.12" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
+<label x="71.12" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_12"/>
+<wire x1="81.28" y1="68.58" x2="73.66" y2="68.58" width="0.1524" layer="91"/>
+<label x="73.66" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_15"/>
+<wire x1="73.66" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
+<label x="71.12" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="165.1" y1="63.5" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
+<label x="152.4" y="63.5" size="1.778" layer="95"/>
+<pinref part="SERIAL_IN" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="63.5" x2="160.02" y2="63.5" width="0.1524" layer="91"/>
+<junction x="162.56" y="63.5"/>
+</segment>
+<segment>
+<pinref part="SERIAL_OUT" gate="G$1" pin="3"/>
+<wire x1="12.7" y1="66.04" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
+<label x="15.24" y="66.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="S1/TX" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PIN_13"/>
+<wire x1="124.46" y1="66.04" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
+<label x="124.46" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERIAL_IN" gate="G$1" pin="3"/>
+<wire x1="160.02" y1="58.42" x2="162.56" y2="58.42" width="0.1524" layer="91"/>
+<label x="149.86" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SERIAL_OUT" gate="G$1" pin="1"/>
+<wire x1="12.7" y1="60.96" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
+<label x="15.24" y="60.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC1_+" class="0">
+<segment>
+<pinref part="ENC1" gate="G$1" pin="4"/>
+<wire x1="91.44" y1="12.7" x2="88.9" y2="12.7" width="0.1524" layer="91"/>
+<label x="78.74" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC1_A" class="0">
+<segment>
+<pinref part="ENC1" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="17.78" x2="88.9" y2="17.78" width="0.1524" layer="91"/>
+<label x="78.74" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC2_+" class="0">
+<segment>
+<pinref part="ENC2" gate="G$1" pin="4"/>
+<wire x1="124.46" y1="12.7" x2="114.3" y2="12.7" width="0.1524" layer="91"/>
+<label x="106.68" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC2_A" class="0">
+<segment>
+<pinref part="ENC2" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="17.78" x2="116.84" y2="17.78" width="0.1524" layer="91"/>
+<label x="106.68" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="S1/RX" class="0">
+<segment>
+<pinref part="SERIAL_OUT" gate="G$1" pin="2"/>
+<wire x1="12.7" y1="63.5" x2="15.24" y2="63.5" width="0.1524" layer="91"/>
+<label x="15.24" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LB+" class="0">
+<segment>
+<pinref part="U$8" gate="G$1" pin="P$1"/>
+<wire x1="40.64" y1="33.02" x2="40.64" y2="38.1" width="0.1524" layer="91"/>
+<label x="43.18" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
